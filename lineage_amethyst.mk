@@ -30,7 +30,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Snapdragon 7s Gen 3" \
     RisingMaintainer="Novicio301129"
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaom
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Rising Flag
 WITH_GMS := false
