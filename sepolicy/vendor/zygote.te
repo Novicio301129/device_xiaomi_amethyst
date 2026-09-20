@@ -1,2 +1,1 @@
 get_prop(zygote, vendor_fp_prop)
-allow zygote vendor_file:file { read open getattr map };
