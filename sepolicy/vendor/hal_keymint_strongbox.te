@@ -1,1 +1,5 @@
-get_prop(vendor_hal_keymint_strongbox, boot_status_prop)
+# bind  domain to official KeyMint Server attribute
+typeattribute vendor_hal_keymint_strongbox hal_keymint_server;
+
+# allow and read boot status
+get_prop(hal_keymint_server, boot_status_prop)
