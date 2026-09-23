@@ -13,3 +13,5 @@ hal_client_domain(tee, vendor_hal_qvirtservice)
 # Allow tee (qseecomd) to access GPT and XBL block devices for TEE/QSEECOM
 allow tee vendor_gpt_block_device:blk_file { read open ioctl };
 allow tee vendor_xbl_block_device:blk_file { read open ioctl };
+allow tee mnt_vendor_file:dir r_dir_perms;
+allow tee mnt_vendor_file:file rw_file_perms;
