@@ -448,6 +448,13 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
+# WFD / Screen Cast Packages
+PRODUCT_PACKAGES += \
+    libwfdnative \
+    libwfdmmsrc \
+    libwfdservice \
+    WfdCommon
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/vendor_cmd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_cmd.xml \
@@ -459,6 +466,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml
+
+# Wi-Fi Display (WFD) / Screen Cast Configuration
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0 \
+    persist.sys.wfd.hp=0 \
+    vendor.audio.feature.wfd.enable=true \
+    vendor.display.builtin_mirroring=true
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/amethyst/amethyst-vendor.mk)
