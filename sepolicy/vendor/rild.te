@@ -10,5 +10,4 @@ set_prop(rild, vendor_radio_prop)
 set_prop(rild, vendor_ssr_prop)
 set_prop(rild, vendor_usb_prop)
 set_prop(rild, vendor_deviceid_prop)
-set_prop(vendor_init, vendor_bluetooth_prop)
-set_prop(vendor_init, vendor_cgroup_follow_prop)
+
