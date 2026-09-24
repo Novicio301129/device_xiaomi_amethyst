@@ -262,23 +262,22 @@
         <!-- C2 encoders -->
         <MediaCodec name="c2.qti.avc.encoder" type="video/avc">
             <Alias name="OMX.qcom.video.encoder.avc"/>
-            <Limit name="size" min="128x128" max="4096x4096" />
+            <Limit name="size" min="128x128" max="1920x1080" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="64" max="2073600" />
-            <Limit name="block-count" range="64-34560" />
-            <Limit name="bitrate" range="1-160000000" />
-            <Limit name="frame-rate" range="1-480" />
-            <Limit name="complexity" range="0-100"  default="100" />
+            <Limit name="block-count" range="64-8160" />
+            <Limit name="bitrate" range="1-40000000" />
+            <Limit name="frame-rate" range="1-60" />
+            <Limit name="complexity" range="0-100" default="0" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
             <Feature name="intra-refresh" />
             <Feature name="encoding-statistics" />
+            <Feature name="low-latency" />
             <Feature name="video-minimum-quality" />
-            <Limit name="performance-point-1280x720" value="480" />
-            <Limit name="performance-point-1920x1080" value="240" />
-            <Limit name="performance-point-3840x2160" value="60" />
-            <Limit name="performance-point-4096x2160" value="60" />
+            <Limit name="performance-point-1280x720" value="60" />
+            <Limit name="performance-point-1920x1080" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder" type="video/hevc">
             <Alias name="OMX.qcom.video.encoder.hevc"/>
