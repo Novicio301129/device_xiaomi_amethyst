@@ -42,3 +42,8 @@ ro.radio.device_type=1
 ro.telephony.default_network=33,33
 ro.vendor.use_data_netmgrd=true
 telephony.lteOnCdmaDevice=1
+
+# infinity X 
+ro.product.marketname=Redmi Note 14 Pro+ 5G
+ro.infinity.soc=Snapdragon 7s Gen 3
+ro.infinity.camera=200MP + 8MP + 2MP
