@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone--xxhdpi-8192-dalvik-heap.mk)
 
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
@@ -476,7 +476,7 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Rom signing
--include vendor/lineage-priv/keys/keys.mk
+# -include vendor/lineage-priv/keys/keys.mk
 
 # MiuiCamera
 $(call inherit-product-if-exists, device/xiaomi/amethyst-miuicamera/device.mk)
