@@ -8,12 +8,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from amethyst device
 $(call inherit-product, device/xiaomi/amethyst/device.mk)
 
-PRODUCT_NAME := infinity_amethyst
+PRODUCT_NAME := lineage_amethyst
 PRODUCT_DEVICE := amethyst
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
@@ -29,8 +29,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# InfinityX Flag
-INFINITY_MAINTAINER := "Novicio-301129"
-TARGET_HAS_UDFPS := true
-WITH_GAPPS := true
