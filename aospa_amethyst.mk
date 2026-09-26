@@ -8,12 +8,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aospa/config/common_full_phone.mk)
 
 # Inherit from amethyst device
 $(call inherit-product, device/xiaomi/amethyst/device.mk)
 
-PRODUCT_NAME := lineage_amethyst
+PRODUCT_NAME := aospa_amethyst
 PRODUCT_DEVICE := amethyst
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
@@ -31,10 +31,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingMaintainer="Novicio301129"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# Rising Flag
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
-PRODUCT_NO_CAMERA := true
-TARGET_ENABLE_BLUR := true
-RISING_MAINTAINER := Novicio301129
