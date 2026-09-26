@@ -1,0 +1,10 @@
+# Allow Gatekeeper to access TEE / QSEECOMD for PIN/Password verification
+allow hal_gatekeeper_default tee_device:chr_file rw_file_perms;
+
+# Allow Gatekeeper to use ION / DMABUF memory heaps
+allow hal_gatekeeper_default ion_device:chr_file r_file_perms;
+allow hal_gatekeeper_default vendor_dmabuf_qseecom_heap_device:chr_file rw_file_perms;
+allow hal_gatekeeper_default vendor_dmabuf_qseecom_ta_heap_device:chr_file rw_file_perms;
+
+# Properties access
+get_prop(hal_gatekeeper_default, boot_status_prop)
