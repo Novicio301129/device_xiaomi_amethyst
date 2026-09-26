@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carrier_config_list>
     <carrier_config>
+        <!-- Enable LTE+ icon globally by default -->
+        <boolean name="hide_lte_plus_data_icon_bool" value="false" />
         <boolean name="apn_expand_bool" value="true" />
         <boolean name="world_phone_bool" value="false" />
         <boolean name="allow_adding_apns_bool" value="true" />
