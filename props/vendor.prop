@@ -103,6 +103,10 @@ vendor.display.enable_hdr10_gpu_target=1
 vendor.display.enable_optimize_refresh=0
 vendor.display.vds_allow_hwc=0
 
+# Disable CWB to fix Screencast auto-disconnect
+vendor.display.enable_concurrent_writeback=0
+debug.sf.enable_hwc_vds=0
+
 # DPM
 persist.vendor.dpm.vndr.feature=1
 persist.vendor.dpm.vndr.halservice.enable=1
