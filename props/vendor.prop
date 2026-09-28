@@ -112,6 +112,10 @@ persist.vendor.dpm.vndr.idletimer.mode=default
 drm.service.enabled=true
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
 
+# Disable CWB to fix Screencast auto-disconnect
+vendor.display.enable_concurrent_writeback=0
+debug.sf.enable_hwc_vds=0
+
 # Fling
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
@@ -139,7 +143,6 @@ debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=0
 debug.sf.enable_gl_backpressure=0
 debug.sf.hw=1
-debug.sf.enable_hwc_vds=1
 debug.sf.early.app.duration=10500000
 debug.sf.early.sf.duration=9500000
 debug.sf.earlyGl.app.duration=10500000
