@@ -290,6 +290,7 @@ PRODUCT_PACKAGES += \
     LineageSettingsOverlayAmethyst \
     NfcOverlayAmethyst \
     SecureElementOverlayAmethyst \
+    SettingsResOverlayAmethyst \
     SettingsOverlayAmethyst \
     SettingsProviderOverlayAmethyst \
     SystemUIOverlayAmethyst \
