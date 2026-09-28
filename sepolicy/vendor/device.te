@@ -22,4 +22,3 @@ type vendor_diag_router, domain;
 
 # Battery
 type vendor_sysfs_qcom_battery, fs_type, sysfs_type;
-type cpu_dma_latency_device, dev_type;
