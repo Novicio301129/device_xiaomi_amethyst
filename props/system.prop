@@ -46,7 +46,7 @@ telephony.lteOnCdmaDevice=1
 # Aboutphone
 ro.mist.display=1220 x 2712, 120 hz
 ro.mist.battery=5110mah
-ro.mist.soc=Snapdratgon 7s Gen 3
+ro.mist.soc=Snapdragon 7s Gen 3
 ro.mist.camera=200MP + 8MP + 2MP
 ro.mist.front=20MP
 ro.mist.platform=SM7635
