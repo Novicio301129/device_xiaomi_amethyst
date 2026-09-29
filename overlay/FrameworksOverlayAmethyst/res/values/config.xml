@@ -872,5 +872,10 @@
     <string name="config_screenRecorderAVCProfileLevel" translatable="false">3.1</string>
 
     <bool name="config_enableVirtualDisplay">true</bool> 
+
+    <!-- Path for the Battery Charging Toggle -->
+    <string name="config_batteryChargingTogglePath" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_batteryChargingSwitchEnabledValue" translatable="false">0</string>
+    <string name="config_batteryChargingSwitchDisabledValue" translatable="false">1</string>
      
 </resources>
