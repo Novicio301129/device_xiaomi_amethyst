@@ -314,12 +314,6 @@ on post-fs-data
     chown system system /sys/module/perf_helper/mimd/mimdtrigger
     # END Performance_BoostFramework
 
-    # Bypass Charging & Charge Limit Nodes
-    chown system system /sys/class/qcom-battery/charge_control_en
-    chmod 0660 /sys/class/qcom-battery/charge_control_en
-    chown system system /sys/class/qcom-battery/input_suspend
-    chmod 0660 /sys/class/qcom-battery/input_suspend
-
 on early-boot
     # Enable WLAN cold boot calibration
     write /sys/kernel/cnss/fs_ready 1
@@ -467,6 +461,14 @@ on boot
 
     chown system system /sys/class/qcom-battery/fastchg_mode
     chmod 0664 /sys/class/qcom-battery/fastchg_mode
+
+    # Bypass Charging & Charge Limit Nodes (Fixed Paths & Permissions)
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/qcom-battery/input_suspend
+    chmod 0666 /sys/class/qcom-battery/input_suspend
+    chown system system /sys/class/qcom-battery/charge_control_en
+    chmod 0666 /sys/class/qcom-battery/charge_control_en
     
 # Modem_SingleSim
 on property:ro.miui.singlesim=*
