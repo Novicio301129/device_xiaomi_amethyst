@@ -638,6 +638,9 @@ on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
+    # Restart audioserver to fix DSP initialization delay
+    restart audioserver
+
 # add sniffer and tcpdump output
 service vendor.tcpdump /vendor/bin/tcpdump -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap -Z system
     class main
