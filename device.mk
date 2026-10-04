@@ -476,7 +476,7 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Rom signing
-# -include vendor/lineage-priv/keys/keys.mk
+-include vendor/lineage-priv/keys/keys.mk
 
 # MiuiCamera
 $(call inherit-product-if-exists, device/xiaomi/amethyst-miuicamera/device.mk)
