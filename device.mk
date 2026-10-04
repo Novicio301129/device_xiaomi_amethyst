@@ -15,14 +15,14 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
-# JamesDSP
-#$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
+# ViPER4AndroidFX
+$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Dolby Audio Processing
 $(call inherit-product-if-exists, packages/apps/LunarisDolby/dolby.mk)
 
 # Qualcomm
-# $(call inherit-product, hardware/qcom-caf/common/common.mk)
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
