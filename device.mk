@@ -293,6 +293,9 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayAmethyst \
     WifiOverlayAmethyst
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-miku
+
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
