@@ -42,3 +42,19 @@ ro.radio.device_type=1
 ro.telephony.default_network=33,33
 ro.vendor.use_data_netmgrd=true
 telephony.lteOnCdmaDevice=1
+
+# Volume Steps (Framework System Props)
+ro.config.alarm_vol_steps=15
+ro.config.media_vol_default=15
+ro.config.media_vol_steps=25
+ro.config.system_vol_steps=15
+ro.config.vc_call_vol_steps=11
+
+# Fling & Framework
+ro.min.fling_velocity=160
+ro.max.fling_velocity=20000
+
+# Miscellaneous System Props
+keyguard.no_require_sim=true
+persist.sys.fuse.passthrough.enable=true
+wifi.aware.interface=wifi-aware0
