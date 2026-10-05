@@ -282,12 +282,9 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
-    ApertureOverlayAmethyst \
     CarrierConfigOverlayAmethyst \
     FrameworksOverlayAmethyst \
     FrameworkOverlayAmethystGLEsim \
-    LineageSDKOverlayAmethyst \
-    LineageSettingsOverlayAmethyst \
     NfcOverlayAmethyst \
     SecureElementOverlayAmethyst \
     SettingsOverlayAmethyst \
