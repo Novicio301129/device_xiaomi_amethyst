@@ -15,8 +15,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
-# ViPER4AndroidFX
-$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+# JamesDSP
+$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
 
 # Dolby Audio Processing
 $(call inherit-product-if-exists, packages/apps/LunarisDolby/dolby.mk)
