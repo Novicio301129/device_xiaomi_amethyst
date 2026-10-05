@@ -169,7 +169,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
--include vendor/yaap/config/BoardConfigReservedSize.mk
+-include vendor/miku/config/BoardConfigReservedSize.mk
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
