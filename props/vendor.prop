@@ -295,3 +295,23 @@ wifi.aware.interface=wifi-aware0
 
 # Low RAM
 ro.config.low_ram=false
+
+# ====================================================
+# Audio Offload & Direct Output Overrides
+# For Dolby + JamesDSP processing
+# ====================================================
+
+# Disable hardware audio offloading
+audio.offload.video=false
+audio.offload.pcm.enable=false
+audio.offload.track.enable=false
+
+# Disable deep buffer (For not bypassing the DSP on media playback)
+audio.deep_buffer.media=false
+
+# set to high offload threshold (Prevents track offloading)
+audio.offload.min.duration.secs=600
+
+# Disable vendor compressed offload
+persist.vendor.audio.flac.offload=false
+vendor.audio.flac.offload.enable=false
