@@ -1,0 +1,5 @@
+# Allow system audioserver to read vendor audio props
+get_prop(audioserver, vendor_audio_prop)
+
+# Allow audioserver to read IRS / Presets stored in internal storage for JamesDSP / Dolby
+r_dir_file(audioserver, media_rw_data_file)
