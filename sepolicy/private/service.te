@@ -1,1 +1,2 @@
 type hal_timestamp_service, service_manager_type;
+type jamesdsp_service, service_manager_type;
