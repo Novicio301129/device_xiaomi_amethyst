@@ -19,15 +19,21 @@ allow system_app {
 allow system_app vendor_sysfs_sensors:file rw_file_perms;
 
 # Battery
-allow system_app vendor_sysfs_power_supply:file rw_file_perms;
 allow system_app vendor_sysfs_power_supply:dir r_dir_perms;
-allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
+allow system_app vendor_sysfs_power_supply:file rw_file_perms;
+allow system_app vendor_sysfs_power_supply:lnk_file read;
+
 allow system_app vendor_sysfs_battery_supply:dir r_dir_perms;
-allow system_app vendor_sysfs_qcom_battery:file rw_file_perms;
+allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
+allow system_app vendor_sysfs_battery_supply:lnk_file read;
+
 allow system_app vendor_sysfs_qcom_battery:dir r_dir_perms;
-allow system_app vendor_sysfs_qcom_battery:dir search;
-allow system_app vendor_sysfs_usb_supply:file r_file_perms;
+allow system_app vendor_sysfs_qcom_battery:file rw_file_perms;
+allow system_app vendor_sysfs_qcom_battery:lnk_file read;
+
 allow system_app vendor_sysfs_usb_supply:dir r_dir_perms;
+allow system_app vendor_sysfs_usb_supply:file r_file_perms;
+allow system_app vendor_sysfs_usb_supply:lnk_file read;
 
 # Core Control
 allow system_app vendor_sysfs_corecontrol:dir search;
