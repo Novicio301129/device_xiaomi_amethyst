@@ -3,8 +3,6 @@ af.fast_track_multiplier=1
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
-audio.deep_buffer.media=true
-audio.offload.video=true
 debug.c2.use_dmabufheaps=1
 persist.vendor.audio.auto.scenario=true
 persist.vendor.audio.induce_crash=false
@@ -112,10 +110,9 @@ persist.vendor.dpm.vndr.idletimer.mode=default
 drm.service.enabled=true
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
 
-# Fling
-ro.min.fling_velocity=160
-ro.max.fling_velocity=20000
-ro.vendor.qti.cgroup_follow.enable=true
+# Disable CWB to fix Screencast auto-disconnect
+vendor.display.enable_concurrent_writeback=0
+debug.sf.enable_hwc_vds=0
 
 # Fingerprint
 persist.vendor.fingerprint.type=udfps_optical
@@ -124,9 +121,6 @@ persist.vendor.qfp=true
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
-# FUSE
-persist.sys.fuse.passthrough.enable=true
 
 # GNSS
 persist.backup.ntpServer=0.pool.ntp.org
@@ -139,7 +133,6 @@ debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=0
 debug.sf.enable_gl_backpressure=0
 debug.sf.hw=1
-debug.sf.enable_hwc_vds=1
 debug.sf.early.app.duration=10500000
 debug.sf.early.sf.duration=9500000
 debug.sf.earlyGl.app.duration=10500000
@@ -232,15 +225,12 @@ ro.vendor.perf.scroll_opt=1
 
 # QCOM
 ro.soc.manufacturer=QTI
-
-# QCOMsysD
 persist.vendor.qcomsysd.enabled=1
 
 # Radio
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
-keyguard.no_require_sim=true
 persist.radio.multisim.config=dsds
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
@@ -280,15 +270,22 @@ vendor.usb.use_gadget_hal=1
 # Vibrator
 ro.vendor.mm.vibrator.sys_path=/sys/class/qcom-haptics
 
-# Volume
-ro.config.alarm_vol_steps=15
-ro.config.media_vol_default=15
-ro.config.media_vol_steps=25
-ro.config.system_vol_steps=15
-ro.config.vc_call_vol_steps=11
+# ====================================================
+# Audio Offload & Direct Output Overrides
+# For Dolby + JamesDSP processing
+# ====================================================
 
-# WLAN
-wifi.aware.interface=wifi-aware0
+# Disable hardware audio offloading
+audio.offload.video=false
+audio.offload.pcm.enable=false
+audio.offload.track.enable=false
 
-# Low RAM
-ro.config.low_ram=false
+# Disable deep buffer (For not bypassing the DSP on media playback)
+audio.deep_buffer.media=false
+
+# High offload threshold (Prevents track offloading)
+audio.offload.min.duration.secs=600
+
+# Disable vendor compressed offload
+persist.vendor.audio.flac.offload=false
+vendor.audio.flac.offload.enable=false
