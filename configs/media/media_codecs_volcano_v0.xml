@@ -276,8 +276,8 @@
             <Feature name="encoding-statistics" />
             <Feature name="low-latency" />
             <Feature name="video-minimum-quality" />
-            <Limit name="performance-point-1280x720" value="60" />
-            <Limit name="performance-point-1920x1080" value="60" />
+            <Limit name="performance-point-1280x720" value="120" />
+            <Limit name="performance-point-1920x1080" value="120" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder" type="video/hevc">
             <Alias name="OMX.qcom.video.encoder.hevc"/>
